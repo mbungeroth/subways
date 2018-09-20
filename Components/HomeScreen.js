@@ -16,7 +16,13 @@ class HomeScreen extends Component {
         <Button
           title="Subway Lines"
           onPress={() =>
-            navigate('Lines', { name: 'Jane' })
+            navigate('Lines')
+          }
+        />
+        <Button
+          title="Line Subscriptions"
+          onPress={() =>
+            navigate('Subscribe')
           }
         />
       </View>

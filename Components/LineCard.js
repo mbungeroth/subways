@@ -4,9 +4,12 @@ import { StyleSheet, Text, View} from 'react-native';
 const LineCard = (props) => {
   const {line} = props;
   return (
-    <Text>
+    <View>
+      <Text>
       Line: {line}
-    </Text>
+      </Text>
+    </View>
+
   );
 };
 
