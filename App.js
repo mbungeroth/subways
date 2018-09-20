@@ -1,21 +1,14 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator, } from 'react-navigation';
+import HomeScreen from './Components/HomeScreen';
+import RegisterScreen from './Components/RegisterScreen';
+import LinesScreen from './Components/LinesScreen';
+import IndividualLineScreen from './Components/IndividualLineScreen';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>NYC Subway Time</Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const App = createStackNavigator({
+  Home: { screen: HomeScreen },
+  Register: { screen: RegisterScreen },
+  Lines: { screen: LinesScreen },
+  IndividualLine: { screen: IndividualLineScreen },
 });
+
+export default App;
