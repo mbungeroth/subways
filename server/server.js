@@ -42,7 +42,7 @@ app.get('/station/:stationId/:direction', async (req, res) => {
       })
     })
     res.send(incomingTrains)
-    res.send(stationResults)
+    // res.send(stationResults)
   } catch (error) {
     console.log(error)
   }
