@@ -36,15 +36,16 @@ app.get('/', async (req, res) => {
   }
 })
 
-app.get('/station/:stationId/northbound', async (req, res) => {
+app.get('/station/:stationId/:direction', async (req, res) => {
   try {
     const station = req.params.stationId;
+    const direction = req.params.direction;
     const stationResults = await mta.schedule(station, 1);
     const lastUpdated = stationResults["updatedOn"];
-    const northboundTrains = stationResults["schedule"][station]["N"].filter(train => train["arrivalTime"] >= lastUpdated && (train["arrivalTime"] - utils.currentEpochTime()) <= 1800);
+    const incomingTrains = stationResults["schedule"][station][direction].filter(train => train["arrivalTime"] >= lastUpdated && (train["arrivalTime"] - utils.currentEpochTime()) <= 1800);
     // const closestNorthbound = utils.convertTime(stationResults["schedule"][station]["N"][0]["arrivalTime"])
     // res.json(closestNorthbound);
-    res.send(northboundTrains)
+    res.send(incomingTrains)
     // res.json(northboundTrains)
   } catch (error) {
     console.log(error)
