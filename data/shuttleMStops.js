@@ -1,4 +1,4 @@
-const manhattanShuttleStops = [
+const shuttleMStops = [
   {
     line: 'ShuttleM',
     stationId: '901',
@@ -10,3 +10,5 @@ const manhattanShuttleStops = [
     stopName: 'Times Sq - 42 St',
   },
 ];
+
+module.exports = shuttleMStops;

@@ -1,4 +1,4 @@
-const gLineStops = [
+const gStops = [
   {
     line: 'G',
     stationId: 'G22',
@@ -105,3 +105,5 @@ const gLineStops = [
     stopName: 'Church Av',
   },
 ];
+
+module.exports = gStops;

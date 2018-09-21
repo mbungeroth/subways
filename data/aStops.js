@@ -1,6 +1,4 @@
-//ids do not work
-
-const aLineStops = [
+const aStops = [
   {
     line: 'A',
     stationId: 'A02',
@@ -337,3 +335,5 @@ const aLineStops = [
     stopName: 'Broad Channel',
   },
 ];
+
+module.exports = aStops;

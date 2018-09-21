@@ -1,4 +1,4 @@
-const sevenLineStops = [
+const sevenStops = [
   {
     line: '7',
     stationId: '701',
@@ -110,3 +110,5 @@ const sevenLineStops = [
     stopName: '34 St - 11 Av',
   },
 ]
+
+module.exports = sevenStops;

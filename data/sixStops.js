@@ -1,4 +1,4 @@
-const sixLineStops = [
+const sixStops = [
   {
     line: '6',
     stationId: '601',
@@ -190,3 +190,5 @@ const sixLineStops = [
     stopName: 'Brooklyn Bridge - City Hall',
   },
 ];
+
+module.exports = sixStops;

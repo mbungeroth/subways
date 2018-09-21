@@ -1,4 +1,4 @@
-const threeLineStop = [
+const threeStops = [
   {
     line: '3',
     stationId: '301',
@@ -170,3 +170,5 @@ const threeLineStop = [
     stopName: 'New Lots Av',
   },
 ];
+
+module.exports = threeStops;

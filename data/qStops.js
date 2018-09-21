@@ -1,4 +1,4 @@
-const qLineStops = [
+const qStops = [
   {
     line: 'Q',
     stationId: 'Q05',
@@ -130,3 +130,5 @@ const qLineStops = [
     stopName: 'Coney Island - Stillwell Av',
   },
 ];
+
+module.exports = qStops;

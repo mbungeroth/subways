@@ -1,4 +1,4 @@
-const rLineStops = [
+const rStops = [
   {
     line: 'R',
     stationId: 'G08',
@@ -225,3 +225,5 @@ const rLineStops = [
     stopName: 'Bay Ridge - 95 St',
   },
 ];
+
+module.exports = rStops;

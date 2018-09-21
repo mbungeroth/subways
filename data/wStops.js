@@ -1,4 +1,4 @@
-const wLineStops = [
+const wStops = [
   {
     line: 'W',
     stationId: 'R01',
@@ -115,3 +115,5 @@ const wLineStops = [
     stopName: 'Whitehall St',
   },
 ];
+
+module.exports = wStops;

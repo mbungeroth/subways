@@ -1,4 +1,4 @@
-const eLineStops = [
+const eStops = [
   {
     line: 'E',
     stationId: 'G05',
@@ -110,3 +110,5 @@ const eLineStops = [
     stopName: 'World Trade Center',
   },
 ];
+
+module.exports = eStops;

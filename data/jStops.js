@@ -1,4 +1,4 @@
-const jLineStops = [
+const jStops = [
   {
     line: 'J',
     stationId: 'G05',
@@ -135,3 +135,5 @@ const jLineStops = [
     stopName: 'Broad St',
   },
 ];
+
+module.exports = jStops;

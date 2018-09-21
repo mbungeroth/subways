@@ -1,4 +1,4 @@
-const mLineStops = [
+const mStops = [
   {
     line: 'M',
     stationId: 'G08',
@@ -185,3 +185,5 @@ const mLineStops = [
     stopName: 'Middle Village - Metropolitan Av',
   },
 ];
+
+module.exports = mStops;

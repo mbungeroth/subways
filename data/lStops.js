@@ -1,4 +1,4 @@
-const lLineStops = [
+const lStops = [
   {
     line: 'L',
     stationId: 'L01',
@@ -120,3 +120,5 @@ const lLineStops = [
     stopName: 'Canarsie - Rockaway Pkwy',
   },
 ]
+
+module.exports = lStops;

@@ -1,4 +1,4 @@
-const zLineStops = [
+const zStops = [
   {
     line: 'Z',
     stationId: 'G05',
@@ -150,3 +150,5 @@ const zLineStops = [
     stopName: 'Broad St',
   },
 ];
+
+module.exports = zStops;

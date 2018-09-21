@@ -1,4 +1,4 @@
-const brooklynShuttleOneStops = [
+const shuttleBOneStops = [
   {
     line: 'ShuttleBOne',
     stationId: 'S01',
@@ -20,3 +20,5 @@ const brooklynShuttleOneStops = [
     stopName: 'Prospect Park',
   },
 ]
+
+module.exports = shuttleBOneStops;

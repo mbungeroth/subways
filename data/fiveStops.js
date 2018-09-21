@@ -1,4 +1,4 @@
-const fiveLineStops = [
+const fiveStops = [
   {
     line: '5',
     stationId: '501',
@@ -195,3 +195,5 @@ const fiveLineStops = [
     stopName: 'Flatbush Av - Brooklyn College',
   },
 ];
+
+module.exports = fiveStops;

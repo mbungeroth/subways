@@ -1,4 +1,4 @@
-const SIRlineStops = [
+const sirStops = [
   {
     line: 'SIR',
     stationId: 'S31',
@@ -105,3 +105,5 @@ const SIRlineStops = [
     stopName: 'Tottenville',
   },
 ];
+
+module.exports = sirStops;

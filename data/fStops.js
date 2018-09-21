@@ -1,4 +1,4 @@
-const fLineStops = [
+const fStops = [
   {
     line: 'F',
     stationId: 'F01',
@@ -225,3 +225,5 @@ const fLineStops = [
     stopName: 'Coney Island - Stillwell Av',
   },
 ];
+
+module.exports = fStops;

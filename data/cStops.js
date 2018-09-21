@@ -1,4 +1,4 @@
-const cLineStops = [
+const cStops = [
   {
     line: 'C',
     stationId: 'A09',
@@ -200,3 +200,5 @@ const cLineStops = [
     stopName: 'Euclid Av',
   },
 ];
+
+module.exports = cStops;

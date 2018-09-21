@@ -1,4 +1,4 @@
-const oneLineStops = [
+const oneStops = [
   {
     line: '1',
     stationId: '101',
@@ -195,3 +195,5 @@ const oneLineStops = [
     stopName: 'South Ferry',
   },
 ];
+
+module.exports = oneStops;
