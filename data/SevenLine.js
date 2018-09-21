@@ -1,5 +1,3 @@
-//ids do not work
-
 const sevenLineStops = [
   {
     line: '7',
