@@ -28,16 +28,16 @@ const cleanText = text => {
   )
 }
 
-const getFeedId = stationId => {
-  const shuttleB = ['S01', 'S03', 'S04']
-  const one = ['1', '2', '3', '4', '5', '6', '9'];
-  const twentySix = ['A', 'C', 'E', 'H', 'S'];
-  const sixteen = ['N', 'R', 'Q', 'W'];
-  const twentyOne = ['B', 'D', 'F', 'M'];
-  const two = ['L'];
-  // const
-  return;
-}
+// const getFeedId = stationId => {
+//   const shuttleB = ['S01', 'S03', 'S04']
+//   const one = ['1', '2', '3', '4', '5', '6', '9'];
+//   const twentySix = ['A', 'C', 'E', 'H', 'S'];
+//   const sixteen = ['N', 'R', 'Q', 'W'];
+//   const twentyOne = ['B', 'D', 'F', 'M'];
+//   const two = ['L'];
+//   // const
+//   return;
+// }
 
 module.exports = {
   convertTime,
