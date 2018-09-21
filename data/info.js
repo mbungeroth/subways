@@ -1349,7 +1349,7 @@ const data = [
     stationId: 'D25',
     stopName: '7 Av',
   },
-  {
+  {//brooklyn shuttle stop too
     line: 'D',
     stationId: 'D26',
     stopName: 'Prospect Park',
