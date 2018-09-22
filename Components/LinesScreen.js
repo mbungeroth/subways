@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, ScrollView, View} from 'react-native';
 import { Button } from 'react-native';
 
+
 class LinesScreen extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +28,7 @@ class LinesScreen extends Component {
               <Button
                 title={`Click to go to ${line} line:`}
                 onPress={() =>
-                  navigate('IndividualLine', { line: {line}, })
+                  navigate('Stations', { line: {line}, })
                 }
               />
             </View>

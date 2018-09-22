@@ -6,15 +6,17 @@ import IndividualLineScreen from './Components/IndividualLineScreen';
 import NorthboundScreen from './Components/NorthboundScreen';
 import SouthboundScreen from './Components/SouthboundScreen';
 import SubscribeScreen from './Components/SubscribeScreen';
+import StationsScreen from './Components/StationsScreen';
 
 const App = createStackNavigator({
   Home: { screen: HomeScreen },
   Register: { screen: RegisterScreen },
   Lines: { screen: LinesScreen },
   IndividualLine: { screen: IndividualLineScreen },
-  LineNorth: { screen: NorthboundScreen },
-  LineSouth: { screen: SouthboundScreen },
+  North: { screen: NorthboundScreen },
+  South: { screen: SouthboundScreen },
   Subscribe: { screen: SubscribeScreen },
+  Stations: { screen: StationsScreen },
 });
 
 export default App;

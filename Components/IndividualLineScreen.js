@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View} from 'react-native';
-import { Button } from 'react-native';
-import allStops from '../data/';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 class IndividualLineScreen extends Component {
   render() {
     const { navigate } = this.props.navigation;
     const { line } = this.props.navigation.state.params.line;
-    const stationStopsArray = allStops[line];
     return (
       <View>
         <Text>
@@ -16,13 +13,13 @@ class IndividualLineScreen extends Component {
         <Button
           title={'Uptown'}
           onPress={() =>
-            navigate('LineNorth', { stationData: stationStopsArray })
+            navigate('LineNorth')
           }
         />
         <Button
           title={'Downtown'}
           onPress={() =>
-            navigate('LineSouth', { stationData: stationStopsArray })
+            navigate('LineSouth')
           }
         />
       </View>
