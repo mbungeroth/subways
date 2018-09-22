@@ -1,11 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, ScrollView} from 'react-native';
 
-const SouthboundScreen = () => {
+const SouthboundScreen = (props) => {
+  const arrayOfStations = props.navigation.state.params.stationData;
   return (
-    <Text>
-      southbound countdown timer
-    </Text>
+    <ScrollView>
+      <Text>
+        southbound countdown timer
+      </Text>
+      {arrayOfStations.map(station => {
+          return <Text key={station.stationId}>{station.stopName}</Text>
+        })
+      }
+    </ScrollView>
   );
 };
 
