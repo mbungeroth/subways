@@ -124,7 +124,11 @@ const nStops = [
     stationId: 'N02',
     stopName: '8 Av',
   },
-  { line: 'N', stationId: 'N03', stopName: 'Fort Hamilton Pkwy' },
+  {
+    line: 'N',
+    stationId: 'N03',
+    stopName: 'Fort Hamilton Pkwy',
+  },
   {
     line: 'N',
     stationId: 'N04',
@@ -162,8 +166,8 @@ const nStops = [
   },
   {
     line: 'N',
-    stationId: 'N12',
-    stopName: 'S.B. Coney Island',
+    stationId: 'D43',
+    stopName: 'Coney Island',
   },
 ];
 

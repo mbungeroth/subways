@@ -51,7 +51,7 @@ const bStops = [
   },
   {
     line: 'B',
-    stationId: 'A12',
+    stationId: 'D13',
     stopName: '145 St',
   },
   {

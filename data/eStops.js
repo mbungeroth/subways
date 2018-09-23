@@ -46,7 +46,7 @@ const eStops = [
   },
   {
     line: 'E',
-    stationId: 'G22',
+    stationId: 'F09',
     stopName: 'Court Sq',
   },
   {

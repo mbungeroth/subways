@@ -31,11 +31,6 @@ const zStops = [
   },
   {
     line: 'Z',
-    stationId: 'J16',
-    stopName: '85 St - Forest Pkwy',
-  },
-  {
-    line: 'Z',
     stationId: 'J17',
     stopName: '75 St',
   },
@@ -81,38 +76,13 @@ const zStops = [
   },
   {
     line: 'Z',
-    stationId: 'J29',
-    stopName: 'Halsey St',
-  },
-  {
-    line: 'Z',
     stationId: 'J30',
     stopName: 'Gates Av',
   },
   {
     line: 'Z',
-    stationId: 'J31',
-    stopName: 'Kosciuszko St',
-  },
-  {
-    line: 'Z',
     stationId: 'M11',
     stopName: 'Myrtle Av',
-  },
-  {
-    line: 'Z',
-    stationId: 'M12',
-    stopName: 'Flushing Av',
-  },
-  {
-    line: 'Z',
-    stationId: 'M13',
-    stopName: 'Lorimer St',
-  },
-  {
-    line: 'Z',
-    stationId: 'M14',
-    stopName: 'Hewes St',
   },
   {
     line: 'Z',

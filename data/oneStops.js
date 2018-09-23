@@ -186,11 +186,6 @@ const oneStops = [
   },
   {
     line: '1',
-    stationId: '140',
-    stopName: 'South Ferry Loop',
-  },
-  {
-    line: '1',
     stationId: '142',
     stopName: 'South Ferry',
   },

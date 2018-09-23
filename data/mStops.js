@@ -116,13 +116,8 @@ const mStops = [
   },
   {
     line: 'M',
-    stationId: 'F14',
-    stopName: '2 Av',
-  },
-  {
-    line: 'M',
-    stationId: 'F15',
-    stopName: 'Delancey St',
+    stationId: 'M18',
+    stopName: 'Essex St',
   },
   {
     line: 'M',

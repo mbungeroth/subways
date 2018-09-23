@@ -61,53 +61,18 @@ const dStops = [
   },
   {
     line: 'D',
-    stationId: 'A14',
-    stopName: '135 St',
-  },
-  {
-    line: 'D',
     stationId: 'A15',
     stopName: '125 St',
   },
   {
     line: 'D',
-    stationId: 'A16',
-    stopName: '116 St',
-  },
-  {
-    line: 'D',
-    stationId: 'A17',
-    stopName: 'Cathedral Pkwy (110 St)',
-  },
-  {
-    line: 'D',
-    stationId: 'A18',
-    stopName: '103 St',
-  },
-  {
-    line: 'D',
-    stationId: 'A19',
-    stopName: '96 St',
-  },
-  {
-    line: 'D',
-    stationId: 'A20',
-    stopName: '86 St',
-  },
-  {
-    line: 'D',
-    stationId: 'A21',
-    stopName: '81 St - Museum of Natural History',
-  },
-  {
-    line: 'D',
-    stationId: 'A22',
-    stopName: '72 St',
-  },
-  {
-    line: 'D',
     stationId: 'A24',
     stopName: '59 St - Columbus Circle',
+  },
+  {
+    line: 'D',
+    stationId: 'D14',
+    stopName: '7 Av',
   },
   {
     line: 'D',
@@ -124,16 +89,7 @@ const dStops = [
     stationId: 'D17',
     stopName: '34 St - Herald Sq',
   },
-  {
-    line: 'D',
-    stationId: 'D18',
-    stopName: '23 St',
-  },
-  {
-    line: 'D',
-    stationId: 'D19',
-    stopName: '14 St',
-  },
+
   {
     line: 'D',
     stationId: 'D20',
@@ -151,8 +107,33 @@ const dStops = [
   },
   {
     line: 'D',
+    stationId: 'R30',
+    stopName: 'DeKalb Av',
+  },
+  {
+    line: 'D',
     stationId: 'D24',
     stopName: 'Atlantic Av - Barclays Ctr',
+  },
+  {
+    line: 'D',
+    stationId: 'R32',
+    stopName: 'Union St',
+  },
+  {
+    line: 'D',
+    stationId: 'R33',
+    stopName: '9 St',
+  },
+  {
+    line: 'D',
+    stationId: 'R34',
+    stopName: 'Prospect Av',
+  },
+  {
+    line: 'R',
+    stationId: 'R35',
+    stopName: '25 St',
   },
   {
     line: 'D',

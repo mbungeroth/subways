@@ -164,6 +164,41 @@ const fourStops = [
     stationId: '250',
     stopName: 'Crown Hts - Utica Av',
   },
+  {
+    line: '4',
+    stationId: '251',
+    stopName: 'Sutter Av - Rutland Rd',
+  },
+  {
+    line: '4',
+    stationId: '252',
+    stopName: 'Saratoga Av',
+  },
+  {
+    line: '4',
+    stationId: '253',
+    stopName: 'Rockaway Av',
+  },
+  {
+    line: '4',
+    stationId: '254',
+    stopName: 'Junius St',
+  },
+  {
+    line: '4',
+    stationId: '255',
+    stopName: 'Pennsylvania Av',
+  },
+  {
+    line: '4',
+    stationId: '256',
+    stopName: 'Van Siclen Av',
+  },
+  {
+    line: '4',
+    stationId: '257',
+    stopName: 'New Lots Av',
+  },
 ];
 
 module.exports = fourStops;

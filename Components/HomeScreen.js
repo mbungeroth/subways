@@ -13,28 +13,39 @@ class HomeScreen extends Component {
           NYC Subway Countdown Timer
         </Text>
         <View >
-        <TouchableHighlight
-          style={styles.buttons}
-        >
-          <Button
-            color="white"
-            title="Subway Lines"
-            onPress={() =>
-              navigate('Lines')
-            }
-          />
-        </TouchableHighlight>
-        <TouchableHighlight
-          style={styles.buttons}
-        >
-          <Button
-            color="white"
-            title="Line Subscriptions"
-            onPress={() =>
-              navigate('Subscribe')
-            }
-          />
-        </TouchableHighlight>
+          <TouchableHighlight
+            style={styles.buttons}
+          >
+            <Button
+              color="white"
+              title="Subway Lines"
+              onPress={() =>
+                navigate('Lines')
+              }
+            />
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={[styles.buttons, { backgroundColor: 'red' }]}
+          >
+            <Button
+              color="white"
+              title="Service Notices"
+              onPress={() =>
+                navigate('Notices')
+              }
+            />
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={styles.buttons}
+          >
+            <Button
+              color="white"
+              title="Line Subscriptions"
+              onPress={() =>
+                navigate('Subscribe')
+              }
+            />
+          </TouchableHighlight>
         </View>
       </View>
     );

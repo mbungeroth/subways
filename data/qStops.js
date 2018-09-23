@@ -41,7 +41,7 @@ const qStops = [
   },
   {
     line: 'Q',
-    stationId: 'R23',
+    stationId: 'Q01',
     stopName: 'Canal St',
   },
   {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView} from 'react-native';
-import axios from 'axios'
+import axios from 'axios';
+import Arrivals from './Arrivals';
 
 class TimesScreen extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class TimesScreen extends Component {
   }
 
   async componentDidMount() {
-    const { data:incomingNorth } = await axios.get(`http://nycsubways.herokuapp.com/api/station/${this.props.navigation.state.params.id}/N/${this.props.navigation.state.params.feed}`);
+    const { data:incomingNorth } = await axios.get(`http://nycsubways.herokuapp.com/api/status${this.props.navigation.state.params.id}/N/${this.props.navigation.state.params.feed}`);
     this.setState({
       northbound: incomingNorth,
     });
@@ -25,27 +26,29 @@ class TimesScreen extends Component {
   render() {
     return !this.state.northbound.length && !this.state.southbound.length ? <View style={styles.page}>loading..</View> : (
       <View style={styles.page}>
-      <Text>
-        northbound trains:
+      <Text style={styles.direction}>
+        Northbound Trains:
       </Text>
       <ScrollView>
         {this.state.northbound.map((train, index) => {
           return (
-            <Text key={index}>
-              {train.train} coming in {train.time}
-            </Text>
+            <Arrivals
+              key={index}
+              train={train.train}
+              time={train.time}
+            />
           )
         })}
-      </ScrollView>
-      <Text>
-        southbound trains:
+      <Text style={[styles.direction, {marginTop: 20}]}>
+        Southbound Trains:
       </Text>
-      <ScrollView>
         {this.state.southbound.map((train, index) => {
           return (
-            <Text key={index}>
-              {train.train} coming in {train.time}
-            </Text>
+            <Arrivals
+              key={index}
+              train={train.train}
+              time={train.time}
+            />
           )
         })}
       </ScrollView>
@@ -66,6 +69,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex: 1,
   },
+  direction: {
+    textAlign: 'center',
+    fontSize: 24,
+    color: '#b942f4',
+    fontWeight: 'bold',
+    marginBottom: 5,
+  }
 });
 
 export default TimesScreen;

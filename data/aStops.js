@@ -329,11 +329,6 @@ const aStops = [
     stationId: 'H15',
     stopName: 'Rockaway Park - Beach 116 St',
   },
-  {
-    line: 'A',
-    stationId: 'H19',
-    stopName: 'Broad Channel',
-  },
 ];
 
 module.exports = aStops;
