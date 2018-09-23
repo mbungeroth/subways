@@ -87,7 +87,7 @@ class TimesScreen extends Component {
           <ScrollView>
             {showNorth &&
               <View>
-                <Text style={styles.direction}>
+                <Text style={[styles.direction, {marginTop: 20}]}>
                   Northbound Trains:
                 </Text>
                 {this.state.northbound.map((train, index) => {
@@ -102,9 +102,10 @@ class TimesScreen extends Component {
                 })}
               </View>
             }
+            <View style={{margin: 10}}/>
             {showSouth &&
               <View>
-                <Text style={[styles.direction, {marginTop: 20}]}>
+                <Text style={styles.direction}>
                   Southbound Trains:
                 </Text>
                 {this.state.southbound.map((train, index) => {

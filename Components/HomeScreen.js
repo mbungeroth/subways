@@ -9,42 +9,34 @@ class HomeScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.page}>
+        <Text style={styles.header}>NYC</Text>
         <Text style={styles.title}>
-          NYC Subway Countdown Timer
+          Subway Countdown Timer
         </Text>
         <View >
           <TouchableHighlight
             style={styles.buttons}
+            onPress={() =>
+              navigate('Lines')
+            }
           >
-            <Button
-              color="white"
-              title="Subway Lines"
-              onPress={() =>
-                navigate('Lines')
-              }
-            />
+            <Text style={styles.buttonText}>Subway Lines</Text>
           </TouchableHighlight>
           <TouchableHighlight
             style={[styles.buttons, { backgroundColor: 'red' }]}
+            onPress={() =>
+              navigate('Notices')
+            }
           >
-            <Button
-              color="white"
-              title="Service Notices"
-              onPress={() =>
-                navigate('Notices')
-              }
-            />
+            <Text style={styles.buttonText}>Service Notices</Text>
           </TouchableHighlight>
           <TouchableHighlight
-            style={styles.buttons}
+            style={[styles.buttons, { backgroundColor: 'green' }]}
+            onPress={() =>
+              navigate('Subscribe')
+            }
           >
-            <Button
-              color="white"
-              title="Line Subscriptions"
-              onPress={() =>
-                navigate('Subscribe')
-              }
-            />
+            <Text style={styles.buttonText}>Line Subscriptions</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -59,6 +51,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 10,
   },
+  header: {
+    color: '#3f9cff',
+    fontSize: 100,
+    fontFamily: 'DevanagariSangamMN-Bold',
+  },
   page: {
     backgroundColor: 'white',
     display: 'flex',
@@ -71,11 +68,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#32bcf2',
     margin: 10,
-    width: 180,
-    height: 40,
+    width: 200,
+    height: 60,
     borderRadius: 10,
-    marginLeft :50,
-    marginRight:50,
+    marginLeft: 50,
+    marginRight: 50,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 15,
   }
 });
 

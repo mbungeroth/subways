@@ -3,9 +3,6 @@ import {
   StyleSheet,
   Text,
   ScrollView,
-  View,
-  TouchableOpacity,
-  Button,
 } from 'react-native';
 import axios from 'axios';
 import Notice from './Notice';
@@ -19,14 +16,15 @@ class ServiceNoticesScreen extends Component {
   }
 
   async componentDidMount() {
-    const { data:notices } = await axios.get('http://nycsubways.herokuapp.com/api/notices');
+    const { data:noticesData } = await axios.get('http://nycsubways.herokuapp.com/api/notices');
     this.setState({
-      notices,
+      notices: noticesData,
     })
   }
 
   render() {
     const { notices } = this.state;
+    console.log('STATE', this.state);
     return !notices.length ? <Text>Loading...</Text> : (
       <ScrollView style={styles.page}>
         {notices.map(notice => {
