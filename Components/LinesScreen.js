@@ -1,13 +1,44 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, ScrollView, View} from 'react-native';
-import { Button } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, TouchableOpacity, Button} from 'react-native';
 
+const getColor = (line) => {
+  const one = ['1','2','3'];
+  const two = ['A','C','E'];
+  const three = ['N','R','Q','W'];
+  const four = ['B','D','F','M'];
+  const five = ['L','S'];
+  const six = ['G'];
+  const seven = ['J','Z'];
+  const eight = ['7'];
+  const nine = ['4','5','6'];
+  if (one.includes(line)) {
+    return '#f22f21';
+  } else if (two.includes(line)) {
+    return '#2078f1';
+  } else if (three.includes(line)) {
+    return '#e0dc0b';
+  } else if (four.includes(line)) {
+    return '#ed9d09';
+  } else if (five.includes(line)) {
+    return '#aaaaaa';
+  } else if (six.includes(line)) {
+    return '#43d62c';
+  } else if (seven.includes(line)) {
+    return '#915a01';
+  } else if (eight.includes(line)) {
+    return '#6e0ddd';
+  } else if (nine.includes(line)) {
+    return '#098702';
+  } else {
+    return '#0f98a8';
+  }
+}
 
 class LinesScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lines: ['A','C','E','B','D','F','M','N','R','Q','W','G','J','Z','L','S','1','2','3','4','5','6','7', 'SIR'],
+      lines: ['1','2','3','4','5','6','A','C','E','N','R','Q','W','B','D','F','M','L','G','J','Z','7','S', 'SIR'],
     }
   }
 
@@ -18,25 +49,57 @@ class LinesScreen extends Component {
     const { lines } = this.state;
     const { navigate } = this.props.navigation;
     return (
-      <ScrollView>
-        <Text>
-          NYC Subway Countdown Timer:
-        </Text>
-        {lines.map(line => {
-          return (
-            <View key={line}>
-              <Button
-                title={`Click to go to ${line} line:`}
-                onPress={() =>
-                  navigate('Stations', { line: {line}, })
-                }
-              />
-            </View>
-          )
-        })}
-      </ScrollView>
+      <View style={styles.page}>
+        <View style={styles.container}>
+          {lines.map(line => {
+            return (
+              <View key={line}>
+                <TouchableOpacity
+                  style={[styles.buttons, { backgroundColor: getColor(line)}]}
+                  onPress={() =>
+                    navigate('Stations', { line: {line} })
+                  }
+                >
+                  <Text
+                    style={styles.buttonText}
+                  >
+                  {line}
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            )
+          })}
+        </View>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  page: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+  buttons: {
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    backgroundColor: '#32bcf2',
+    margin: 10,
+    width: 80,
+    height: 80,
+    borderRadius: 50,
+  },
+  buttonText: {
+    fontSize: 35,
+    fontWeight: 'bold',
+    color: 'white'
+  },
+  container: {
+    marginTop: 40,
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  }
+});
 
 export default LinesScreen;

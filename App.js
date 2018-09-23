@@ -3,8 +3,7 @@ import HomeScreen from './Components/HomeScreen';
 import RegisterScreen from './Components/RegisterScreen';
 import LinesScreen from './Components/LinesScreen';
 import IndividualLineScreen from './Components/IndividualLineScreen';
-import NorthboundScreen from './Components/NorthboundScreen';
-import SouthboundScreen from './Components/SouthboundScreen';
+import TimesScreen from './Components/TimesScreen';
 import SubscribeScreen from './Components/SubscribeScreen';
 import StationsScreen from './Components/StationsScreen';
 
@@ -13,8 +12,7 @@ const App = createStackNavigator({
   Register: { screen: RegisterScreen },
   Lines: { screen: LinesScreen },
   IndividualLine: { screen: IndividualLineScreen },
-  North: { screen: NorthboundScreen },
-  South: { screen: SouthboundScreen },
+  Times: { screen: TimesScreen },
   Subscribe: { screen: SubscribeScreen },
   Stations: { screen: StationsScreen },
 });
