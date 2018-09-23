@@ -13,7 +13,7 @@ class TimesScreen extends Component {
   }
 
   async componentDidMount() {
-    const { data:incomingNorth } = await axios.get(`http://nycsubways.herokuapp.com/api/status${this.props.navigation.state.params.id}/N/${this.props.navigation.state.params.feed}`);
+    const { data:incomingNorth } = await axios.get(`http://nycsubways.herokuapp.com/api/station/${this.props.navigation.state.params.id}/N/${this.props.navigation.state.params.feed}`);
     this.setState({
       northbound: incomingNorth,
     });
