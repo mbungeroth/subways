@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView} from 'react-native';
 import axios from 'axios'
 
-class NorthboundScreen extends Component {
+class TimesScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,8 +23,8 @@ class NorthboundScreen extends Component {
   }
 
   render() {
-    return !this.state.northbound.length && !this.state.southbound.length ? <View>loading..</View> : (
-      <View>
+    return !this.state.northbound.length && !this.state.southbound.length ? <View style={styles.page}>loading..</View> : (
+      <View style={styles.page}>
       <Text>
         northbound trains:
       </Text>
@@ -54,4 +54,18 @@ class NorthboundScreen extends Component {
   }
 }
 
-export default NorthboundScreen;
+const styles = StyleSheet.create({
+  title: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginTop: 20,
+    textAlign: 'center',
+  },
+  page: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+});
+
+export default TimesScreen;

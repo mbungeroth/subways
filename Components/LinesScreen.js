@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, ScrollView, View, TouchableOpacity, Button} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  ScrollView,
+  View,
+  TouchableOpacity,
+  Button,
+} from 'react-native';
 
-const getColor = (line) => {
-  const one = ['1','2','3'];
-  const two = ['A','C','E'];
-  const three = ['N','R','Q','W'];
-  const four = ['B','D','F','M'];
-  const five = ['L','S'];
+const getColor = line => {
+  const one = ['1', '2', '3'];
+  const two = ['A', 'C', 'E'];
+  const three = ['N', 'R', 'Q', 'W'];
+  const four = ['B', 'D', 'F', 'M'];
+  const five = ['L', 'S'];
   const six = ['G'];
-  const seven = ['J','Z'];
+  const seven = ['J', 'Z'];
   const eight = ['7'];
-  const nine = ['4','5','6'];
+  const nine = ['4', '5', '6'];
   if (one.includes(line)) {
     return '#f22f21';
   } else if (two.includes(line)) {
@@ -32,14 +39,39 @@ const getColor = (line) => {
   } else {
     return '#0f98a8';
   }
-}
+};
 
 class LinesScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lines: ['1','2','3','4','5','6','A','C','E','N','R','Q','W','B','D','F','M','L','G','J','Z','7','S', 'SIR'],
-    }
+      lines: [
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        'A',
+        'C',
+        'E',
+        'N',
+        'R',
+        'Q',
+        'W',
+        'B',
+        'D',
+        'F',
+        'M',
+        'L',
+        'G',
+        'J',
+        'Z',
+        '7',
+        'S',
+        'SIR',
+      ],
+    };
   }
 
   static navigationOptions = {
@@ -49,28 +81,22 @@ class LinesScreen extends Component {
     const { lines } = this.state;
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.page}>
+      <ScrollView style={styles.page}>
         <View style={styles.container}>
           {lines.map(line => {
             return (
               <View key={line}>
                 <TouchableOpacity
-                  style={[styles.buttons, { backgroundColor: getColor(line)}]}
-                  onPress={() =>
-                    navigate('Stations', { line: {line} })
-                  }
+                  style={[styles.buttons, { backgroundColor: getColor(line) }]}
+                  onPress={() => navigate('Stations', { line: { line } })}
                 >
-                  <Text
-                    style={styles.buttonText}
-                  >
-                  {line}
-                  </Text>
+                  <Text style={styles.buttonText}>{line}</Text>
                 </TouchableOpacity>
               </View>
-            )
+            );
           })}
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -82,7 +108,7 @@ const styles = StyleSheet.create({
   },
   buttons: {
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     backgroundColor: '#32bcf2',
     margin: 10,
     width: 80,
@@ -92,14 +118,15 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 35,
     fontWeight: 'bold',
-    color: 'white'
+    color: 'white',
   },
   container: {
-    marginTop: 40,
+    marginTop: 5,
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-  }
+    justifyContent: 'space-evenly',
+  },
 });
 
 export default LinesScreen;

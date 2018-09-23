@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, ScrollView, Button } from 'react-native';
 import allStops from '../data/';
+import StationCard from './StationCard';
 
 const getFeedId = (line) => {
   const one = ['1','2','3','4','5','6','S'];
@@ -43,19 +44,20 @@ class StationsScreen extends Component {
   render() {
     const { line } = this.props.navigation.state.params.line;
     const feed = getFeedId(line);
-    console.log(feed)
     const arrayOfStations = allStops[line];
     return (
-      <ScrollView>
-        <Text>
-          Stations for the {line} line:
+      <ScrollView style={styles.page}>
+        <Text style={styles.title}>
+          Choose your station:
         </Text>
         {arrayOfStations.map(station => {
             return (
-              <Button
+              <StationCard
                 key={station.stationId}
+                id={station.stationId}
                 title={station.stopName}
-                onPress={() => this.handlePress(station.stationId, feed)}
+                feed={feed}
+                handlePress={this.handlePress}
               />
             )
           })
@@ -64,5 +66,19 @@ class StationsScreen extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  title: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginTop: 20,
+    textAlign: 'center',
+  },
+  page: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+});
 
 export default StationsScreen;
