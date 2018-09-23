@@ -44,7 +44,8 @@ class StationsScreen extends Component {
   render() {
     const { line } = this.props.navigation.state.params.line;
     const feed = getFeedId(line);
-    const arrayOfStations = allStops[line];
+    const now = new Date();
+    const arrayOfStations = (now.getHours() > 6 || now.getHours() < 23) ? allStops[line].filter(station => station.night === false) : allStops[line];
     return (
       <ScrollView style={styles.page}>
         <Text style={styles.title}>
@@ -53,7 +54,7 @@ class StationsScreen extends Component {
         {arrayOfStations.map(station => {
             return (
               <StationCard
-                key={station.stationId}
+                key={station.id}
                 id={station.stationId}
                 title={station.stopName}
                 feed={feed}

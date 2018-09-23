@@ -10,13 +10,23 @@ class TimesScreen extends Component {
       northbound: [],
       southbound: [],
     }
+    this.fetchNorthbound = this.fetchNorthbound.bind(this);
+    this.fetchSouthbound = this.fetchSouthbound.bind(this);
   }
 
   async componentDidMount() {
+    await this.fetchNorthbound()
+    await this.fetchSouthbound()
+  }
+
+  async fetchNorthbound() {
     const { data:incomingNorth } = await axios.get(`http://nycsubways.herokuapp.com/api/station/${this.props.navigation.state.params.id}/N/${this.props.navigation.state.params.feed}`);
     this.setState({
       northbound: incomingNorth,
     });
+  }
+
+  async fetchSouthbound() {
     const { data:incomingSouth } = await axios.get(`http://nycsubways.herokuapp.com/api/station/${this.props.navigation.state.params.id}/S/${this.props.navigation.state.params.feed}`);
     this.setState({
       southbound: incomingSouth,
