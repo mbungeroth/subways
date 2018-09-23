@@ -18,8 +18,16 @@ class TimesScreen extends Component {
   }
 
   async componentDidMount() {
-    await this.fetchNorthbound()
-    await this.fetchSouthbound()
+    this.fetchNorthbound()
+    this.fetchSouthbound()
+    this.reloader = setInterval(() => {
+      this.fetchNorthbound()
+      this.fetchSouthbound()
+    }, 15000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.reloader);
   }
 
   async fetchNorthbound() {
