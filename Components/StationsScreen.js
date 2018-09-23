@@ -38,8 +38,8 @@ class StationsScreen extends Component {
     super(props);
     this.handlePress = this.handlePress.bind(this);
   }
-  handlePress = (stationId, feed) => {
-    this.props.navigation.navigate('Times', { id: stationId, feed, } )
+  handlePress = (stationId, feed, line) => {
+    this.props.navigation.navigate('Times', { id: stationId, feed, line} )
   }
   render() {
     const { line } = this.props.navigation.state.params.line;
@@ -58,6 +58,7 @@ class StationsScreen extends Component {
                 id={station.stationId}
                 title={station.stopName}
                 feed={feed}
+                line={line}
                 handlePress={this.handlePress}
               />
             )

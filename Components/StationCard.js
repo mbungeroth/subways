@@ -2,12 +2,12 @@ import React from 'react';
 import { StyleSheet, TouchableHighlight, View, Text } from 'react-native';
 
 const StationCard = (props) => {
-  const { id, title, feed, handlePress } = props;
+  const { id, title, feed, line, handlePress } = props;
   return (
     <View>
       <TouchableHighlight
         style={styles.buttons}
-        onPress={() => handlePress(id, feed)}
+        onPress={() => handlePress(id, feed, line)}
       >
         <View style={styles.container}>
           <Text style={styles.text}>

@@ -19,7 +19,7 @@ class ServiceNoticesScreen extends Component {
   }
 
   async componentDidMount() {
-    const { data:notices } = await axios.get('http://nycsubways.herokuapp.com/api/status/');
+    const { data:notices } = await axios.get('http://nycsubways.herokuapp.com/api/notices');
     this.setState({
       notices,
     })

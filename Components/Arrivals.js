@@ -2,14 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView} from 'react-native';
 
 const Arrivals = (props) => {
-  const { train, time } = props;
+  const { train, time, chosenLine } = props;
   return (
-    <ScrollView style={styles.cards}>
+    <ScrollView style={[styles.cards, {backgroundColor: train === chosenLine ? 'white' : '#d8d8d8',}]}>
       <View style={styles.container}>
-        <Text style={[styles.text, {marginLeft: 10}]}>
+        <Text style={[styles.text, {marginLeft: 10, color: train === chosenLine ? 'black': '#848383',}]}>
           {train}
         </Text>
-        <Text style={[styles.text, {marginRight: 10}]}>
+        <Text style={[styles.text, {marginRight: 10, color: train === chosenLine ? 'black': '#848383',}]}>
           {time}
         </Text>
       </View>
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   cards: {
-    backgroundColor: 'white',
     flex: 1,
     height: 60,
     borderWidth: 0.5,
