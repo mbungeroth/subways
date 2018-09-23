@@ -90,7 +90,11 @@ class LinesScreen extends Component {
                   style={[styles.buttons, { backgroundColor: getColor(line) }]}
                   onPress={() => navigate('Stations', { line: { line } })}
                 >
-                  <Text style={styles.buttonText}>{line}</Text>
+                  <Text
+                    style={[styles.buttonText, { color: (line === 'N' || line === 'R' || line === 'Q' || line === 'W') ? "black" : "white" }]}
+                  >
+                    {line}
+                  </Text>
                 </TouchableOpacity>
               </View>
             );
@@ -118,7 +122,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 35,
     fontWeight: 'bold',
-    color: 'white',
+    // color: 'white',
   },
   container: {
     marginTop: 5,
