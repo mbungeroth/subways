@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, ScrollView, Button } from 'react-native';
+import { StyleSheet, Text, ScrollView, TextInput, View } from 'react-native';
 import allStops from '../data/';
 import StationCard from './StationCard';
 
@@ -36,11 +36,16 @@ const getFeedId = (line) => {
 class StationsScreen extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      searchText: '',
+    }
     this.handlePress = this.handlePress.bind(this);
   }
-  handlePress = (stationId, feed, line) => {
+
+  handlePress(stationId, feed, line) {
     this.props.navigation.navigate('Times', { id: stationId, feed, line} )
   }
+
   render() {
     const { line } = this.props.navigation.state.params.line;
     const feed = getFeedId(line);
@@ -49,9 +54,17 @@ class StationsScreen extends Component {
     return (
       <ScrollView style={styles.page}>
         <Text style={styles.title}>
-          Choose your station:
+          Choose or search for your station:
         </Text>
-        {arrayOfStations.map(station => {
+        <View style={styles.inputContainer} keyboardShouldPersistTaps='never'>
+          <TextInput
+            value={this.state.searchText}
+            onChangeText={(text) => this.setState({ searchText: text })}
+            style={styles.searchBar}
+            placeholder="enter station name"
+          />
+        </View>
+        {arrayOfStations.filter(station => station.stopName.toLowerCase().includes(this.state.searchText.toLowerCase())).map(station => {
             return (
               <StationCard
                 key={station.id}
@@ -81,6 +94,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex: 1,
   },
+  searchBar: {
+    height: 40,
+    width: 300,
+    borderColor: 'gray',
+    borderWidth: 2,
+    borderRadius: 5,
+    textAlign: 'center',
+    fontSize: 23,
+  },
+  inputContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  }
 });
 
 export default StationsScreen;

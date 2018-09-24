@@ -22,7 +22,7 @@ class HomeScreen extends Component {
           >
             <Text style={styles.buttonText}>Subway Lines</Text>
           </TouchableHighlight>
-          <TouchableHighlight
+          {/* <TouchableHighlight
             style={[styles.buttons, { backgroundColor: 'red' }]}
             onPress={() =>
               navigate('Notices')
@@ -37,7 +37,7 @@ class HomeScreen extends Component {
             }
           >
             <Text style={styles.buttonText}>Line Subscriptions</Text>
-          </TouchableHighlight>
+          </TouchableHighlight> */}
         </View>
       </View>
     );

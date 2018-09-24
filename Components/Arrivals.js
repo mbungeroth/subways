@@ -4,10 +4,10 @@ import { StyleSheet, Text, View, ScrollView} from 'react-native';
 const Arrivals = (props) => {
   const { train, time, chosenLine } = props;
   return (
-    <ScrollView style={[styles.cards, {backgroundColor: train === chosenLine ? 'white' : '#d8d8d8',}]}>
+    <ScrollView style={[styles.cards, {backgroundColor: (train === chosenLine || chosenLine === 'S') ? 'white' : '#d8d8d8',}]}>
       <View style={styles.container}>
-        <Text style={[styles.text, {marginLeft: 10, color: train === chosenLine ? 'black': '#848383',}]}>
-          {train}
+        <Text style={[styles.text, {marginLeft: 10, color: (train === chosenLine || chosenLine === 'S') ? 'black': '#848383',}]}>
+          { (train === 'H'|| train === 'GS') ? 'S' : train }
         </Text>
         <Text style={[styles.text, {marginRight: 10, color: train === chosenLine ? 'black': '#848383',}]}>
           {time}
