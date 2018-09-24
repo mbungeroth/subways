@@ -47,7 +47,7 @@ class StationsScreen extends Component {
   }
 
   render() {
-    const { line } = this.props.navigation.state.params.line;
+    const line = this.props.navigation.state.params.line;
     const feed = getFeedId(line);
     const now = new Date();
     const arrayOfStations = (now.getHours() > 6 || now.getHours() < 23) ? allStops[line].filter(station => station.night === false) : allStops[line];

@@ -5,7 +5,6 @@ import {
   ScrollView,
   View,
   TouchableOpacity,
-  Button,
 } from 'react-native';
 
 const getColor = line => {
@@ -88,7 +87,7 @@ class LinesScreen extends Component {
               <View key={line}>
                 <TouchableOpacity
                   style={[styles.buttons, { backgroundColor: getColor(line) }]}
-                  onPress={() => navigate('Stations', { line: { line } })}
+                  onPress={() => navigate('Stations', { line, })}
                 >
                   <Text
                     style={[styles.buttonText, { color: (line === 'N' || line === 'R' || line === 'Q' || line === 'W') ? "black" : "white" }]}
